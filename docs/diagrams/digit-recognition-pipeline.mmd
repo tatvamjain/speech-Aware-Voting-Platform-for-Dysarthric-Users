@@ -1,0 +1,11 @@
+flowchart LR
+    A[UA-Speech isolated digit audio] --> B[Waveform preprocessing]
+    B --> C[Resample to 16 kHz]
+    C --> D[Wav2Vec2 processor and encoder]
+    D --> E[Contextual frame representations]
+    E --> F[Mean pooling]
+    F --> G[768-dimensional utterance vector]
+    G --> H[10-class fully connected head]
+    H --> I[Predicted digit 0–9]
+    I --> J[Application state and input field]
+    J --> K[Read-back, confirmation and correction]

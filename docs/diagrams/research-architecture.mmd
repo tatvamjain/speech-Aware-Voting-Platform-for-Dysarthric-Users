@@ -1,0 +1,20 @@
+flowchart TD
+    A[National e-voting portal] --> B{Voice interaction?}
+    B -->|No| C[Manual-entry portal]
+    B -->|Yes| D[Language selection]
+    D --> E[Accessibility-mode selection]
+    E --> F[Typical-speech pathway]
+    E --> G[Visually impaired pathway]
+    E --> H[Dysarthric-speech pathway]
+    H --> I[Speech-condition assessment]
+    I --> J[Task-specific digit recognizer]
+    C --> K[Shared voting workflow]
+    F --> K
+    G --> K
+    J --> K
+    K --> L[Registration and OTP]
+    L --> M[Login]
+    M --> N[Ballot and candidate selection]
+    N --> O[Read-back, confirmation or correction]
+    O --> P[Vote recording and receipt]
+    P --> Q[Results and logout]
